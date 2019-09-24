@@ -11,11 +11,15 @@ const MapComponent = (props) => {
   const { state: { metadata, priceMap }, dispatch } = useContext(Store);
   const headers = {
     headerData: [
-      {name:"Level ID",propertyName:"lvlId"},
-      {name:"EAN",propertyName:"ean"},
-      {name:"Hierarchy Level",propertyName:""},
-      {name:"Parent Level ID",propertyName:"lvlid"},
-      {name:"Parent Hierarchy Level",propertyName:"lvlid"}],
+      { name: "Level ID", propertyName: "lvlId" },
+      { name: "EAN", propertyName: "ean" },
+      { name: "Hierarchy Level", propertyName: "lvlTyp" },
+      { name: "Parent Level ID", propertyName: "prtLvlId" },
+      { name: "Parent Hierarchy Level", propertyName: "prtLvlTyp" },
+      { name: "Country", propertyName: "country" }],
+    FxeHeaders: metadata.FXENames,
+    FxgHeaders: metadata.FXGNames,
+    FxfHeaders: metadata.FXFNames,
   }
   console.log("metadat", metadata);
   return (
