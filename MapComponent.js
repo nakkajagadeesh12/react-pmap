@@ -43,7 +43,6 @@ const MapComponent = (props) => {
               }
             </Trow>
           </Thead>
-        </Wrapper>
         <Tbody>
           {
             priceMap.map(price =>
@@ -58,6 +57,7 @@ const MapComponent = (props) => {
             )
           }
         </Tbody>
+        </Wrapper>
       </Table>
     </Wrapper>
   )
