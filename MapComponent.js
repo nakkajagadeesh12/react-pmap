@@ -9,10 +9,12 @@ const MapComponent = () => {
     <Wrapper>
       <Table>
         <Thead>
-
+          <Trow>
+          </Trow>
         </Thead>
         <Tbody>
-
+          <Trow>
+          </Trow>
         </Tbody>
       </Table>
     </Wrapper>
