@@ -7,7 +7,6 @@ flex-direction:column;
 border:1px solid black;
 padding-left:10px;
 padding-right:10px;
-height:20px;
 width:100px;
 align-items:center;
 ${switchProp('col', {
