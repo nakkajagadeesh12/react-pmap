@@ -1,9 +1,9 @@
 import React from 'react';
 import TcellStyle from './TableStyle';
 
-const Tcell = ({ children }) => {
+const Tcell = ({ children,...styles }) => {
   return (
-    <TcellStyle>
+    <TcellStyle {...styles}>
       {children}
     </TcellStyle>
   )
