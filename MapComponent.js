@@ -21,16 +21,22 @@ const MapComponent = (props) => {
     FxgHeaders: metadata.FXGNames,
     FxfHeaders: metadata.FXFNames,
   }
+  // const pricingData = {
+  //   pricData: Object.keys(pricing),
+  //   FXE: priceMap.FXE,
+  //   FXG: priceMap.FXG,
+  //   FXF: priceMap.FXF,
+  // }
   console.log("metadat", metadata);
   return (
     <Wrapper >
       <Table>
         <Wrapper >
           <Thead>
-            <Trow col>
+            <Trow>
               {
                 headers.headerData.map(header => (
-                  <Tcell>
+                  <Tcell col="1">
                     {header.name}
                   </Tcell>
                 ))
@@ -39,11 +45,18 @@ const MapComponent = (props) => {
           </Thead>
         </Wrapper>
         <Tbody>
-          <Trow>
-            <Tcell>
-
-            </Tcell>
-          </Trow>
+          {
+            priceMap.map(price =>
+              <Trow>
+                {
+                  headers.headerData.map(key => <Tcell>{price[key.propertyName]}</Tcell>)
+                  // Object.keys(price).map(key =>
+                  //   (key === 'FXE' || key === 'FXG' || key === 'FXF') ? null : <Tcell col="2">{price[key]}</Tcell>
+                  // )
+                }
+              </Trow>
+            )
+          }
         </Tbody>
       </Table>
     </Wrapper>

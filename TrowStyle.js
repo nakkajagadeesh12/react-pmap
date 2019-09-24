@@ -5,9 +5,7 @@ import { ifProp } from 'styled-tools';
 const TrowStyle = styled.div`
 display:flex;
 flex-direction:row;
-${ifProp('col', css`
-width:50%;
-`)}
+margin:auto;
 `;
 
 export default TrowStyle;
