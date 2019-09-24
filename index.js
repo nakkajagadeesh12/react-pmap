@@ -3,6 +3,7 @@ import { render } from 'react-dom';
 import './style.css';
 import Main from './Main';
 import MapComponent from './MapComponent';
+import { StoreProvider } from './Store';
 
 const App = () => {
   return (
@@ -12,4 +13,4 @@ const App = () => {
   )
 }
 
-render(<App />, document.getElementById('root'));
+render(<StoreProvider><App /></StoreProvider>, document.getElementById('root'));

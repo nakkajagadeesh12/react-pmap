@@ -1,4 +1,4 @@
-export const data = {
+const data = {
   "metadata": {
     "eanPageSize": "100",
     "eanTotal": "0",
@@ -405,3 +405,5 @@ export const data = {
   }],
   "eanMap": null
 }
+
+export default data;
