@@ -1,11 +1,12 @@
 import React from 'react';
 import TableStyle from './TableStyle';
 
-const Thead = () => {
+const Thead = ({ children }) => {
 
   return (
     <TableStyle>
-      table
+      head
+      {children}
     </TableStyle>
   )
 }

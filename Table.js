@@ -1,11 +1,12 @@
 import React from 'react';
 import TableStyle from './TableStyle';
 
-const Table = () => {
+const Table = ({ children }) => {
 
   return (
     <TableStyle>
       table
+      {children}
     </TableStyle>
   )
 }

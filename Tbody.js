@@ -1,12 +1,13 @@
 import React from 'react';
-import TableStyle from './TableStyle';
+import TbodyStyle from './TbodyStyle';
 
-const Tbody = () => {
+const Tbody = ({ children }) => {
 
   return (
-    <TableStyle>
-      table
-    </TableStyle>
+    <TbodyStyle>
+      body
+      {children}
+    </TbodyStyle>
   )
 }
 
