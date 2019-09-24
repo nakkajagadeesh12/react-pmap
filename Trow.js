@@ -1,10 +1,10 @@
 import React from 'react';
 import TrowStyle from './TrowStyle';
 
-const Trow = ({ children }) => {
+const Trow = ({ children, ...styles }) => {
 
   return (
-    <TrowStyle>
+    <TrowStyle {...styles}>
       {children}
     </TrowStyle>
   )
