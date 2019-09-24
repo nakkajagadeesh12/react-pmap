@@ -5,7 +5,6 @@ const Tbody = ({ children }) => {
 
   return (
     <TbodyStyle>
-      body
       {children}
     </TbodyStyle>
   )

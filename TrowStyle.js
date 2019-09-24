@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
-const TbodyStyle = styled.div`
-
+const TrowStyle = styled.div`
+display:flex;
+flex-direction:row;
+background-color:#4b1388;
 `;
 
-export default TbodyStyle;
+export default TrowStyle;

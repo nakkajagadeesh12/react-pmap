@@ -5,7 +5,6 @@ const Thead = ({ children }) => {
 
   return (
     <TableStyle>
-      head
       {children}
     </TableStyle>
   )

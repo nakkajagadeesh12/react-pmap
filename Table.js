@@ -5,7 +5,6 @@ const Table = ({ children }) => {
 
   return (
     <TableStyle>
-      table
       {children}
     </TableStyle>
   )

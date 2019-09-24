@@ -5,7 +5,6 @@ const Trow = ({ children }) => {
 
   return (
     <TrowStyle>
-      row
       {children}
     </TrowStyle>
   )

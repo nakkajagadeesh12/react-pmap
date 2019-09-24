@@ -23,18 +23,21 @@ const MapComponent = (props) => {
   }
   console.log("metadat", metadata);
   return (
-    <Wrapper>
+    <Wrapper >
       <Table>
-        <Thead>
-          {
-
-            <Trow>
-              <Tcell>
-
-              </Tcell>
+        <Wrapper >
+          <Thead>
+            <Trow col>
+              {
+                headers.headerData.map(header => (
+                  <Tcell>
+                    {header.name}
+                  </Tcell>
+                ))
+              }
             </Trow>
-          }
-        </Thead>
+          </Thead>
+        </Wrapper>
         <Tbody>
           <Trow>
             <Tcell>
