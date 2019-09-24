@@ -1,13 +1,20 @@
 import React from 'react';
 import Wrapper from './Wrapper';
 import Table from './Table';
+import Thead from './Thead';
+import Tbody from './Tbody';
 
-const MapComponent = ()=>{
-  return(
+const MapComponent = () => {
+  return (
     <Wrapper>
-    <Table>
+      <Table>
+        <Thead>
 
-    </Table>
+        </Thead>
+        <Tbody>
+
+        </Tbody>
+      </Table>
     </Wrapper>
   )
 }
