@@ -69,8 +69,9 @@ const MapComponent = (props) => {
                 priceMap.map(price =>
                   <Trow>
                     {
-                      Object.keys(price.FXE).map(key=>{
-                        console.log("key------><",key)
+                      Object.keys(price.FXE).map((key, index) => {
+                        console.log("key------><", key)
+                        return <Tcell key={index} col="2">{price.FXE[key].split('#')[0]}</Tcell>
                       })
                     }
                   </Trow>
@@ -89,7 +90,19 @@ const MapComponent = (props) => {
                 }
               </Trow>
             </Thead>
-            <Tbody></Tbody>
+            <Tbody>
+              {
+                priceMap.map(price =>
+                  <Trow>
+                    {
+                      Object.keys(price.FXG).map((key, index) => {
+                        return <Tcell key={index} col="2">{price.FXG[key].split('#')[0]}</Tcell>
+                      })
+                    }
+                  </Trow>
+                )
+              }
+            </Tbody>
           </Wrapper>
           <Wrapper>
             <Thead>
@@ -102,7 +115,19 @@ const MapComponent = (props) => {
                 }
               </Trow>
             </Thead>
-            <Tbody></Tbody>
+            <Tbody>
+              {
+                priceMap.map(price =>
+                  <Trow>
+                    {
+                      Object.keys(price.FXF).map((key, index) => {
+                        return <Tcell key={index} col="2">{price.FXF[key].split('#')[0]}</Tcell>
+                      })
+                    }
+                  </Trow>
+                )
+              }
+            </Tbody>
           </Wrapper>
         </Grid>
       </Table>
