@@ -48,7 +48,7 @@ const MapComponent = (props) => {
             priceMap.map(price =>
               <Trow>
                 {
-                  headers.headerData.map(key => <Tcell>{price[key.propertyName]}</Tcell>)
+                  headers.headerData.map(key => <Tcell col="2">{price[key.propertyName]}</Tcell>)
                   // Object.keys(price).map(key =>
                   //   (key === 'FXE' || key === 'FXG' || key === 'FXF') ? null : <Tcell col="2">{price[key]}</Tcell>
                   // )
