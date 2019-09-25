@@ -6,6 +6,7 @@ import Tbody from './Tbody';
 import Trow from './Trow';
 import Tcell from './Tcell';
 import { Store } from './Store';
+import Grid from './Grid';
 
 const MapComponent = (props) => {
   const { state: { metadata, priceMap }, dispatch } = useContext(Store);
@@ -21,45 +22,76 @@ const MapComponent = (props) => {
     FxgHeaders: metadata.FXGNames,
     FxfHeaders: metadata.FXFNames,
   }
-  // const pricingData = {
-  //   pricData: Object.keys(pricing),
-  //   FXE: priceMap.FXE,
-  //   FXG: priceMap.FXG,
-  //   FXF: priceMap.FXF,
-  // }
+
   console.log("metadat", metadata);
+  console.log("priceMap----->", priceMap);
   return (
-    <Wrapper >
+    <Grid >
       <Table>
-        <Wrapper >
-          <Thead>
-            <Trow>
-              {
-                headers.headerData.map(header => (
-                  <Tcell col="1">
-                    {header.name}
-                  </Tcell>
-                ))
-              }
-            </Trow>
-          </Thead>
-        <Tbody>
-          {
-            priceMap.map(price =>
+        <Grid>
+          <Wrapper >
+            <Thead>
               <Trow>
                 {
-                  headers.headerData.map(key => <Tcell col="2">{price[key.propertyName]}</Tcell>)
-                  // Object.keys(price).map(key =>
-                  //   (key === 'FXE' || key === 'FXG' || key === 'FXF') ? null : <Tcell col="2">{price[key]}</Tcell>
-                  // )
+                  headers.headerData.map(header => (
+                    <Tcell col="1">
+                      {header.name}
+                    </Tcell>
+                  ))
                 }
               </Trow>
-            )
-          }
-        </Tbody>
-        </Wrapper>
+            </Thead>
+            <Tbody>
+              {
+                priceMap.map(price =>
+                  <Trow>
+                    {
+                      headers.headerData.map((key, index) => <Tcell key={index} col="2">{price[key.propertyName]}</Tcell>)
+                    }
+                  </Trow>
+                )
+              }
+            </Tbody>
+          </Wrapper>
+          <Wrapper>
+            <Thead>
+              <Trow>
+                {
+                  Object.keys(headers.FxeHeaders).map((key, index) => {
+                    console.log(key, headers.FxeHeaders[key], "key")
+                    return <Tcell key={index} col="3">{headers.FxeHeaders[key]}</Tcell>
+                  })
+                }
+              </Trow>
+            </Thead>
+          </Wrapper>
+          <Wrapper>
+            <Thead>
+              <Trow>
+                {
+                  Object.keys(headers.FxgHeaders).map((key, index) => {
+                    console.log(key, headers.FxgHeaders[key], "key")
+                    return <Tcell key={index} col="4">{headers.FxgHeaders[key]}</Tcell>
+                  })
+                }
+              </Trow>
+            </Thead>
+          </Wrapper>
+          <Wrapper>
+            <Thead>
+              <Trow>
+                {
+                  Object.keys(headers.FxfHeaders).map((key, index) => {
+                    console.log(key, headers.FxfHeaders[key], "key")
+                    return <Tcell key={index} col="5">{headers.FxfHeaders[key]}</Tcell>
+                  })
+                }
+              </Trow>
+            </Thead>
+          </Wrapper>
+        </Grid>
       </Table>
-    </Wrapper>
+    </Grid>
   )
 }
 
