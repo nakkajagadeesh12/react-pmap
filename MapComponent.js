@@ -7,6 +7,7 @@ import Trow from './Trow';
 import Tcell from './Tcell';
 import { Store } from './Store';
 import Grid from './Grid';
+import {InputComp}  from './InputComp'
 
 const MapComponent = (props) => {
   const { state: { metadata, priceMap }, dispatch } = useContext(Store);
@@ -22,10 +23,7 @@ const MapComponent = (props) => {
     FxgHeaders: metadata.FXGNames,
     FxfHeaders: metadata.FXFNames,
   }
-
-  console.log("metadat", metadata);
-  console.log("priceMap----->", priceMap);
-  return (
+   return (
     <Grid >
       <Table>
         <Grid>
@@ -36,6 +34,16 @@ const MapComponent = (props) => {
                   headers.headerData.map(header => (
                     <Tcell col="1">
                       {header.name}
+                       <InputComp/>
+                    </Tcell>
+                  ))
+                }
+                     </Trow>
+                 <Trow>
+                {
+                  headers.headerData.map(header => (
+                    <Tcell col="1">
+                     <InputComp/>
                     </Tcell>
                   ))
                 }
