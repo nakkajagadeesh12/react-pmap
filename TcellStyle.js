@@ -11,7 +11,7 @@ width:100px;
 align-items:center;
 ${switchProp('col', {
     '1': css`
-background-color:#266686;
+background-color:#4B1388;
 color:white;
 width:100px;
 height:50px;

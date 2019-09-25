@@ -34,7 +34,6 @@ const MapComponent = (props) => {
                   headers.headerData.map(header => (
                     <Tcell col="1">
                       {header.name}
-                      <InputComp />
                     </Tcell>
                   ))
                 }
@@ -42,7 +41,7 @@ const MapComponent = (props) => {
               <Trow>
                 {
                   headers.headerData.map(header => (
-                    <Tcell col="1">
+                    <Tcell col>
                       <InputComp />
                     </Tcell>
                   ))
