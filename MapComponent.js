@@ -64,6 +64,19 @@ const MapComponent = (props) => {
                 }
               </Trow>
             </Thead>
+            <Tbody>
+              {
+                priceMap.map(price =>
+                  <Trow>
+                    {
+                      Object.keys(price.FXE).map(key=>{
+                        console.log("key------><",key)
+                      })
+                    }
+                  </Trow>
+                )
+              }
+            </Tbody>
           </Wrapper>
           <Wrapper>
             <Thead>
@@ -76,6 +89,7 @@ const MapComponent = (props) => {
                 }
               </Trow>
             </Thead>
+            <Tbody></Tbody>
           </Wrapper>
           <Wrapper>
             <Thead>
@@ -88,6 +102,7 @@ const MapComponent = (props) => {
                 }
               </Trow>
             </Thead>
+            <Tbody></Tbody>
           </Wrapper>
         </Grid>
       </Table>
