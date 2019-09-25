@@ -46,7 +46,9 @@ const MapComponent = (props) => {
                 priceMap.map(price =>
                   <Trow>
                     {
-                      headers.headerData.map((key, index) => <Tcell key={index} col="2">{price[key.propertyName]}</Tcell>)
+                      headers.headerData.map((key, index) => {
+                        console.log("key",key)
+                       return <Tcell key={index} col="2">{price[key.propertyName]}</Tcell>})
                     }
                   </Trow>
                 )
