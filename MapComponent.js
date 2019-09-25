@@ -58,7 +58,6 @@ const MapComponent = (props) => {
               <Trow>
                 {
                   Object.keys(headers.FxeHeaders).map((key, index) => {
-                    console.log(key, headers.FxeHeaders[key], "key")
                     return <Tcell key={index} col="3">{headers.FxeHeaders[key]}</Tcell>
                   })
                 }
@@ -70,7 +69,6 @@ const MapComponent = (props) => {
                   <Trow>
                     {
                       Object.keys(price.FXE).map((key, index) => {
-                        console.log("key------><", key)
                         return <Tcell key={index} col="2">{price.FXE[key].split('#')[0]}</Tcell>
                       })
                     }
@@ -84,7 +82,6 @@ const MapComponent = (props) => {
               <Trow>
                 {
                   Object.keys(headers.FxgHeaders).map((key, index) => {
-                    console.log(key, headers.FxgHeaders[key], "key")
                     return <Tcell key={index} col="4">{headers.FxgHeaders[key]}</Tcell>
                   })
                 }
@@ -109,7 +106,6 @@ const MapComponent = (props) => {
               <Trow>
                 {
                   Object.keys(headers.FxfHeaders).map((key, index) => {
-                    console.log(key, headers.FxfHeaders[key], "key")
                     return <Tcell key={index} col="5">{headers.FxfHeaders[key]}</Tcell>
                   })
                 }
