@@ -13,6 +13,7 @@ ${switchProp('col', {
     '1': css`
 background-color:#266686;
 color:white;
+width:100px;
 height:50px;
   `,
     '2': css`
