@@ -38,15 +38,7 @@ const MapComponent = (props) => {
                   ))
                 }
               </Trow>
-              <Trow>
-                {
-                  headers.headerData.map(header => (
-                    <Tcell col>
-                      <InputComp />
-                    </Tcell>
-                  ))
-                }
-              </Trow>
+             
             </Thead>
             <Tbody>
               {
@@ -54,7 +46,6 @@ const MapComponent = (props) => {
                   <Trow>
                     {
                       headers.headerData.map((key, index) => {
-                        console.log("key", key)
                         return <Tcell key={index} col="2">{price[key.propertyName]}</Tcell>
                       })
                     }
