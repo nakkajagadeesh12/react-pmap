@@ -35,7 +35,10 @@ const MapComponent = props => {
             <Thead>
               <Trow>
                 {headers.headerData.map(header => (
-                  <Tcell col="1">{header.name}</Tcell>
+                  <Tcell>
+                    <Tcell col="1">{header.name}</Tcell>
+                    <InputComp />
+                  </Tcell>
                 ))}
               </Trow>
             </Thead>
